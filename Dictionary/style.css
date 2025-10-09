@@ -1,0 +1,126 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: rgb(40, 40, 255);
+}
+
+.wrapper {
+  background-color: #ffffff;
+  width: 50vmin;
+  padding: 50px 10px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%; 
+  top: 50%; 
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.wrapper .input-box {
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-box input {
+  width: 65%;
+  border: none;
+  border-bottom: 1px solid #ccc;;
+  padding: 10px 10px;
+  outline: none;
+}
+
+.input-box button {
+  background-color: #ffffff; 
+  border: none;
+}
+
+.input-box button img {
+  height: 30px; 
+  width: 30px;
+}
+.input-box button:hover {
+  cursor: pointer; 
+}
+
+.wrapper .display-data {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 10px;
+  text-align: left;
+  display: flex; 
+  flex-direction: column; 
+  align-items: left;
+  justify-content: center;
+  gap: 15px;
+  display: none;
+}
+.display-data.active {
+  display: flex; 
+}
+
+.display-data .phonetics {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.display-data .phonetics .display-text {
+  display: flex; 
+  flex-direction: column;
+  gap: 10px;
+}
+
+.display-data .phonetics img {
+  height: 30px;
+  width: 30px;
+}
+
+.display-data .definition-div {
+  display: flex; 
+  flex-direction: column; 
+  align-items: start;  
+  justify-content: center;
+  gap: 15px;
+  color: rgb(62, 62, 62);
+}
+
+.def-div {
+  display: flex; 
+  flex-direction: column;
+  gap: 5px;
+}
+span {
+  font-style: italic; 
+  color: #565454;
+}
+
+.error-message {
+  width: 100%;
+  height: 150px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 40px;
+  display: none; 
+}
+.error-message.active {
+  display: flex;
+}
+
+@media (max-width:768px) {
+  .wrapper {
+    width: 90%;
+  } 
+}

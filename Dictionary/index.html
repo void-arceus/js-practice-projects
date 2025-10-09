@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="input-box">
+      <input type="text" id="searchWord" placeholder="Type the word...">
+      <button id="searchBtn"><img src="search_icon.png" alt=""></button>
+    </div>
+    <div class="error-message">Word Not Found!!</div>
+    <div class="display-data">
+      <div class="phonetics">
+        <div class="display-text">
+          <p id="displayWord"></p>
+          <span id="text"></span>
+        </div>
+        <p id="playAudio"><img src="volume.png" alt=""></p>
+        <audio id="audioPlayer">Play</audio>
+      </div>
+      <div class="definition-div">
+        <div class="def-div">
+          <h4>Part of Speech: <span id="partOfSpeech"></span></h4>
+        </div>
+        <div class="def-div">
+          <h4>Definition:</h4>
+          <span id="definition"></span>
+        </div>
+        <div class="def-div">
+          <h4>Example: </h4>
+          <span id="example"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
