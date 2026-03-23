@@ -1,2 +1,2 @@
-# 50_Project_Challenge
-A challenge to myself to make 50 projects using html, css and javascript.
+# js-mini-projects
+Hands-on JavaScript mini projects focused on mastering core concepts, DOM manipulation, and interactive UI development.
