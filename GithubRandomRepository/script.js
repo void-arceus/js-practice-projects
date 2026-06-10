@@ -13,6 +13,21 @@ const languages = [
     "TypeScript",
 ];
 
+const languageColor = {
+    JavaScript: "#f1e05a",
+    Python: "#3572A5",
+    Java: "#b07219",
+    "C++": "#f34b7d",
+    "C#": "#178600",
+    Go: "#00ADD8",
+    Rust: "#dea584",
+    PHP: "#4F5D95",
+    Ruby: "#701516",
+    Swift: "#F05138",
+    Kotlin: "#A97BFF",
+    TypeScript: "#3178C6",
+};
+
 const selectMenu = document.getElementById("select");
 const searchBtn = document.getElementById("searchBtn");
 const missingInputError = document.getElementById("missingInputError");
@@ -29,7 +44,7 @@ languages.forEach((language) => {
 });
 
 // select a language
-let selectedLanguage = "";
+let selectedLanguage = selectMenu.value;
 selectMenu.addEventListener("change", (event) => {
     if (missingInputError.classList.contains("active"))
         missingInputError.classList.remove("active");
@@ -65,7 +80,10 @@ function setDisplayRepoData(repoData) {
     console.log(repoData);
     const template = `<div class="repo-header">
                     <h2>${repoData[idx].name}</h2>
-                    <p>${repoData[idx].description}</p>
+                    <p>${repoData[idx].description.trim() !== "" ? repoData[idx].description : "Description Not Available"}</p>
+                </div>
+                <div>
+                    <a class="repo-link" href="${repoData[idx].html_url}" target="_blank" rel="noopener noreferrer">View Repository</a> 
                 </div>
                 <div class="repo-footer">
                     <div class="repo-footer-data">
@@ -92,6 +110,8 @@ function setDisplayRepoData(repoData) {
             `;
     repoInfo.innerHTML = template;
     repoInfo.classList.add("active");
+    document.querySelector(".language-tag").style.backgroundColor =
+        languageColor[`${selectedLanguage}`];
     const refreshBtn = document.getElementById("refreshBtn");
     if (refreshBtn !== null) {
         refreshBtn.addEventListener("click", () => {

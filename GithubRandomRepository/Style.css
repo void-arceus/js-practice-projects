@@ -199,3 +199,12 @@ select {
 #refreshBtn:active {
     background-color: #292929;
 }
+
+.repo-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(4, 146, 4);
+}
+.repo-link:hover {
+    color: rgb(2, 124, 2);
+}
